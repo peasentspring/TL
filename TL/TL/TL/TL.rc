@@ -1,0 +1,458 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+#include "verrsrc.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(简体，中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "#include ""verrsrc.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#include ""res\\TL.rc2""  // 非 Microsoft Visual C++ 编辑的资源\r\n"
+    "#include ""l.CHS\\afxres.rc""      // 标准组件\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\TL.ico"
+IDR_TLTYPE              ICON                    "res\\TLDoc.ico"
+IDI_ICON_RED            ICON                    "res\\icon2.ico"
+IDI_ICON_GRAY           ICON                    "res\\icon3.ico"
+IDI_ICON_GREEN          ICON                    "res\\icon4.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU
+BEGIN
+    POPUP "文件(&F)"
+    BEGIN
+        MENUITEM SEPARATOR
+        MENUITEM SEPARATOR
+        MENUITEM "退出(&X)",                      ID_APP_EXIT
+    END
+    POPUP "帮助(&H)"
+    BEGIN
+        MENUITEM "关于 TL(&A)...",                ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY 
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 170, 62
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 TL"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,14,14,20,20
+    LTEXT           "TL，1.0 版 Developed by zwj",IDC_STATIC,42,14,114,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2015",IDC_STATIC,42,26,121,8
+    DEFPUSHBUTTON   "确定",IDOK,113,41,50,14,WS_GROUP
+END
+
+IDD_TL_FORM DIALOGEX 0, 0, 689, 411
+STYLE DS_SETFONT | DS_3DLOOK | DS_FIXEDSYS | WS_CHILD
+EXSTYLE WS_EX_RTLREADING
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "导入数据",IDC_STATIC,15,65,316,101
+    PUSHBUTTON      "浏览...",IDC_APPLICATION_BROWSE,243,100,64,15
+    EDITTEXT        IDC_APPLICATION_FILE,17,100,213,17,ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    GROUPBOX        "Log",IDC_STATIC,329,7,350,394
+    EDITTEXT        IDC_PARA_VALUE1,81,229,73,16,ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    CONTROL         "",IDC_RICHEDIT,"RICHEDIT",TCS_HOTTRACK | TCS_VERTICAL | TCS_BUTTONS | TCS_RAGGEDRIGHT | TCS_OWNERDRAWFIXED | TCS_MULTISELECT | WS_BORDER | WS_VSCROLL | WS_HSCROLL,349,29,330,318,WS_EX_STATICEDGE
+    LTEXT           "参数名称",IDC_PARA_NAME3,30,287,50,18
+    PUSHBUTTON      "导入",IDC_APPLICATION_IMPORT,243,124,64,15
+    LTEXT           "连接状态",IDC_STATIC,15,27,38,16
+    EDITTEXT        IDC_PARA_VALUE3,81,287,73,16,ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    EDITTEXT        IDC_PARA_VALUE2,81,258,73,16,ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "参数名称",IDC_PARA_NAME2,30,258,50,18
+    LTEXT           "参数名称",IDC_PARA_NAME1,30,229,50,18
+    LTEXT           "产品类型",IDC_STATIC,169,30,41,14
+    COMBOBOX        IDC_COMBO_PRODUCT_TYPE,495,51,145,12,CBS_SIMPLE | CBS_SORT | NOT WS_VISIBLE | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "下载参数",IDC_BUTTON_DOWNLOAD,565,365,90,19
+    LTEXT           "参数文件路径：",IDC_STATIC,19,78,105,16
+    GROUPBOX        "参数显示",IDC_STATIC,15,167,316,234
+    ICON            IDI_ICON_RED,IDI_ICON_RED,77,27,20,20
+    ICON            IDI_ICON_GRAY,IDI_ICON_GREEN,117,27,20,20
+    EDITTEXT        IDC_PARA_VALUE4,81,316,73,16,ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "参数名称",IDC_PARA_NAME4,30,316,50,18
+    EDITTEXT        IDC_PARA_VALUE5,81,345,73,16,ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "参数名称",IDC_PARA_NAME5,30,345,50,18
+    EDITTEXT        IDC_PARA_VALUE6,235,229,73,16,ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "参数名称",IDC_PARA_NAME6,182,229,50,18
+    EDITTEXT        IDC_PARA_VALUE7,235,258,73,16,ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "参数名称",IDC_PARA_NAME7,182,258,50,18
+    EDITTEXT        IDC_PARA_VALUE8,235,287,73,16,ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "参数名称",IDC_PARA_NAME8,182,287,50,18
+    EDITTEXT        IDC_PARA_VALUE9,235,316,73,16,ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "参数名称",IDC_PARA_NAME9,182,316,50,18
+    EDITTEXT        IDC_PARA_VALUE10,235,345,73,16,ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "参数名称",IDC_PARA_NAME10,182,345,50,18
+    CONTROL         "重启",IDC_RESETCHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,496,369,30,10
+    LTEXT           "Static",IDC_STATIC_PRODUCT_TYPE,206,31,120,12
+END
+
+IDD_PROGCANCEL DIALOGEX 30, 73, 221, 58
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION
+CAPTION "Progress"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    CONTROL         "Progress1",IDC_PROG_PROGRESS,"msctls_progress32",PBS_SMOOTH | WS_BORDER,16,16,186,10
+    PUSHBUTTON      "Cancel",IDCANCEL,150,34,50,14
+END
+
+IDD_CONFIG DIALOGEX 30, 73, 555, 270
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "System Config"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_SETUP_CAN_HARDWARE,445,43,75,48,CBS_DROPDOWN | WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    COMBOBOX        IDC_SETUP_CAN_CHAN,445,58,75,48,CBS_DROPDOWNLIST | CBS_UPPERCASE | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_SETUP_CAN_TRAID,445,73,75,12,ES_UPPERCASE | ES_AUTOHSCROLL | ES_WANTRETURN
+    EDITTEXT        IDC_SETUP_CAN_RECID,445,88,75,12,ES_UPPERCASE | ES_AUTOHSCROLL | ES_WANTRETURN
+    DEFPUSHBUTTON   "OK",IDOK,490,245,50,14,WS_GROUP
+    GROUPBOX        "CAN",IDC_STATIC,367,33,166,74
+    RTEXT           "Channel",IDC_STATIC,395,59,45,10
+    RTEXT           "Transmit ID",IDC_STATIC,395,74,45,10
+    RTEXT           "Receive ID",IDC_STATIC,395,89,46,10
+    PUSHBUTTON      "Cancel",IDCANCEL,414,245,50,14,WS_GROUP
+    GROUPBOX        "Speed",IDC_STATIC,367,135,166,74
+    CONTROL         "250kbps",IDC_BAUD_250K,"Button",BS_AUTORADIOBUTTON | WS_GROUP,474,151,54,10
+    CONTROL         "500kbps",IDC_BAUD_500K,"Button",BS_AUTORADIOBUTTON,474,166,54,10
+    CONTROL         "1mbps",IDC_BAUD_1M,"Button",BS_AUTORADIOBUTTON,474,181,54,10
+    RTEXT           "Baud rate",IDC_STATIC,393,152,75,10
+    RTEXT           "Hardware",IDC_STATIC,395,44,45,10
+    LTEXT           "产品编号：",IDC_PRODUCT_ID,30,22,40,10
+    LTEXT           "产品类型：",IDC_PRODUCT_TYPE,30,51,42,10
+    LTEXT           "命令1：",IDC_STATIC,30,121,30,14
+    EDITTEXT        IDC_ORDER_1,57,121,90,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_ORDER_CHECK_1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,150,122,16,10
+    LTEXT           "命令2：",IDC_STATIC,185,121,30,14
+    EDITTEXT        IDC_ORDER_2,216,121,90,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_ORDER_CHECK_2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,310,122,16,10
+    LTEXT           "命令3：",IDC_STATIC,30,142,30,14
+    EDITTEXT        IDC_ORDER_3,57,142,90,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_ORDER_CHECK_3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,150,143,16,10
+    LTEXT           "命令4：",IDC_STATIC,185,142,30,14
+    EDITTEXT        IDC_ORDER_4,216,142,90,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_ORDER_CHECK_4,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,310,143,16,10
+    LTEXT           "命令5：",IDC_STATIC,30,161,30,14
+    EDITTEXT        IDC_ORDER_5,57,161,90,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_ORDER_CHECK_5,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,150,162,16,10
+    LTEXT           "命令6：",IDC_STATIC,185,161,30,14
+    EDITTEXT        IDC_ORDER_6,216,161,90,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_ORDER_CHECK_6,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,310,162,16,10
+    LTEXT           "命令7：",IDC_STATIC,30,180,30,14
+    EDITTEXT        IDC_ORDER_7,57,180,90,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_ORDER_CHECK_7,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,150,181,16,10
+    LTEXT           "命令8：",IDC_STATIC,185,180,30,14
+    EDITTEXT        IDC_ORDER_8,216,180,90,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_ORDER_CHECK_8,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,310,181,16,10
+    LTEXT           "命令9：",IDC_STATIC,30,203,30,14
+    EDITTEXT        IDC_ORDER_9,57,203,90,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_ORDER_CHECK_9,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,150,204,16,10
+    LTEXT           "命令10：",IDC_STATIC,185,204,33,14
+    EDITTEXT        IDC_ORDER_10,216,203,90,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_ORDER_CHECK_10,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,310,204,16,10
+    EDITTEXT        IDC_PRODUCT_INPUT,73,19,89,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PRODUCT_TYPE_INPUT,73,48,89,14,ES_AUTOHSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404B0"
+        BEGIN
+            VALUE "CompanyName", "TODO:  <公司名>"
+            VALUE "FileDescription", "TL"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "TL.exe"
+            VALUE "LegalCopyright", "TODO:  (C) <公司名>。  保留所有权利。"
+            VALUE "OriginalFilename", "TL.exe"
+            VALUE "ProductName", "TODO:  <产品名>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 163
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 55
+    END
+
+    IDD_TL_FORM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 679
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 401
+    END
+
+    IDD_PROGCANCEL, DIALOG
+    BEGIN
+        RIGHTMARGIN, 219
+        BOTTOMMARGIN, 47
+    END
+
+    IDD_CONFIG, DIALOG
+    BEGIN
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDP_OLE_INIT_FAILED     "OLE 初始化失败。  请确保 OLE 库是正确的版本。"
+END
+
+STRINGTABLE
+BEGIN
+    IDR_MAINFRAME           "TL\n\nTL\n\n\nTL.Document\nTL.Document"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_APP_TITLE       "TL"
+    AFX_IDS_IDLEMESSAGE     "就绪"
+END
+
+STRINGTABLE
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_NEW             "创建新文档\n新建"
+    ID_FILE_OPEN            "打开现有文档\n打开"
+    ID_FILE_CLOSE           "关闭活动文档\n关闭"
+    ID_FILE_SAVE            "保存活动文档\n保存"
+    ID_FILE_SAVE_AS         "用新名称保存活动文档\n另存为"
+END
+
+STRINGTABLE
+BEGIN
+    ID_APP_ABOUT            "显示程序信息、版本号和版权信息\n关于"
+    ID_APP_EXIT             "退出应用程序；提示保存文档\n退出"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_MRU_FILE1       "打开此文档"
+    ID_FILE_MRU_FILE2       "打开此文档"
+    ID_FILE_MRU_FILE3       "打开此文档"
+    ID_FILE_MRU_FILE4       "打开此文档"
+    ID_FILE_MRU_FILE5       "打开此文档"
+    ID_FILE_MRU_FILE6       "打开此文档"
+    ID_FILE_MRU_FILE7       "打开此文档"
+    ID_FILE_MRU_FILE8       "打开此文档"
+    ID_FILE_MRU_FILE9       "打开此文档"
+    ID_FILE_MRU_FILE10      "打开此文档"
+    ID_FILE_MRU_FILE11      "打开此文档"
+    ID_FILE_MRU_FILE12      "打开此文档"
+    ID_FILE_MRU_FILE13      "打开此文档"
+    ID_FILE_MRU_FILE14      "打开此文档"
+    ID_FILE_MRU_FILE15      "打开此文档"
+    ID_FILE_MRU_FILE16      "打开此文档"
+END
+
+STRINGTABLE
+BEGIN
+    ID_NEXT_PANE            "切换到下一个窗格\n下一窗格"
+    ID_PREV_PANE            "切换回上一个窗格\n上一窗格"
+END
+
+STRINGTABLE
+BEGIN
+    ID_WINDOW_SPLIT         "将活动窗口拆分为多个窗格\n拆分"
+END
+
+STRINGTABLE
+BEGIN
+    ID_EDIT_CLEAR           "清除所选内容\n清除"
+    ID_EDIT_CLEAR_ALL       "清除全部内容\n全部清除"
+    ID_EDIT_COPY            "复制所选内容，将其放入剪贴板\n复制"
+    ID_EDIT_CUT             "剪切所选内容，将其放入剪贴板\n剪切"
+    ID_EDIT_FIND            "查找指定的文本\n查找"
+    ID_EDIT_PASTE           "插入剪贴板内容\n粘贴"
+    ID_EDIT_REPEAT          "重复上一操作\n重复"
+    ID_EDIT_REPLACE         "用其他文本替换特定的文本\n替换"
+    ID_EDIT_SELECT_ALL      "选定整个文档\n全选"
+    ID_EDIT_UNDO            "撤消上一操作\n撤消"
+    ID_EDIT_REDO            "重做上次撤消的操作\n重做"
+END
+
+STRINGTABLE
+BEGIN
+    ID_VIEW_STATUS_BAR      "显示或隐藏状态栏\n切换状态栏"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCSIZE          "更改窗口大小"
+    AFX_IDS_SCMOVE          "更改窗口位置"
+    AFX_IDS_SCMINIMIZE      "将窗口缩小成图标"
+    AFX_IDS_SCMAXIMIZE      "将窗口放大到最大尺寸"
+    AFX_IDS_SCNEXTWINDOW    "切换到下一个文档窗口"
+    AFX_IDS_SCPREVWINDOW    "切换到上一个文档窗口"
+    AFX_IDS_SCCLOSE         "关闭活动窗口并提示保存文档"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCRESTORE       "将窗口恢复到正常大小"
+    AFX_IDS_SCTASKLIST      "激活任务列表"
+END
+
+#endif    // 中文(简体，中国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#include "res\TL.rc2"  // 非 Microsoft Visual C++ 编辑的资源
+#include "l.CHS\afxres.rc"      // 标准组件
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
